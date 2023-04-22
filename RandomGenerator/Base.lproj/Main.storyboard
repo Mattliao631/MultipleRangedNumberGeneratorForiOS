@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RandomGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xr0-Be-aoi">
+                                <rect key="frame" x="0.0" y="48" width="414" height="784"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RangedNumberGenerationCell" id="4SR-h5-O8p" customClass="RangedNumberGenerationCell" customModule="RandomGenerator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4SR-h5-O8p" id="qpG-Uc-4Kd">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxz-Lb-2Nd">
+                                                    <rect key="frame" x="20" y="4" width="107" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.32067416658303582" green="0.89000000000000001" blue="0.87474966280320754" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="9999999" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="603-TA-cTk">
+                                                    <rect key="frame" x="211" y="4" width="108" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.89000000000000001" green="0.83833101132938459" blue="0.00073172749359714964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="TextFieldEnd:" destination="4SR-h5-O8p" eventType="editingDidEndOnExit" id="pTC-Vw-Glq"/>
+                                                    </connections>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsG-WM-Kob">
+                                                    <rect key="frame" x="319" y="3" width="95" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.52547177810000001" green="0.51799939220000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="Generate">
+                                                        <color key="titleColor" red="0.60354102647966645" green="0.89000000000000001" blue="0.50071754599823781" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="Generate:" destination="4SR-h5-O8p" eventType="touchUpInside" id="NkQ-sA-8Ow"/>
+                                                    </connections>
+                                                </button>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KEb-u6-A7D">
+                                                    <rect key="frame" x="127" y="4" width="84" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.74785298660093347" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="TextFieldEnd:" destination="4SR-h5-O8p" eventType="editingDidEndOnExit" id="us6-iV-uqD"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="GenerateButton" destination="hsG-WM-Kob" id="2dg-wd-JO6"/>
+                                            <outlet property="LowerBound" destination="KEb-u6-A7D" id="ZgO-do-sE4"/>
+                                            <outlet property="Number" destination="dxz-Lb-2Nd" id="gSt-dn-uIB"/>
+                                            <outlet property="UpperBound" destination="603-TA-cTk" id="EeP-gx-lFZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="xBa-lt-jUw"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="b8H-Bj-eqH"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkQ-0m-1rJ">
+                                <rect key="frame" x="0.0" y="832" width="167" height="30"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Generate Numbers">
+                                    <color key="titleColor" red="1" green="0.74930703219999995" blue="0.96873526180000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="GenerateNumbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wRi-qp-aol"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e24-Pp-DDg">
+                                <rect key="frame" x="167" y="832" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.89000000000000001" green="0.59074583732531616" blue="0.68487797212554036" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="7YT-Gg-TmV"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Add Row">
+                                    <color key="titleColor" red="0.63887308085379679" green="1" blue="0.60789789796622729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="AddRow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GNY-Pn-WbM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2EB-dO-Osz">
+                                <rect key="frame" x="247" y="832" width="167" height="30"/>
+                                <color key="backgroundColor" red="0.83233270169999996" green="0.77908590320000004" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Delete Row">
+                                    <color key="titleColor" red="0.21204008370482377" green="0.50853908534580072" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="DeleteRow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VNd-NO-4IG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jkQ-0m-1rJ" secondAttribute="bottom" id="QsG-9F-Vas"/>
+                            <constraint firstItem="Xr0-Be-aoi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Z4S-HX-NJu"/>
+                            <constraint firstItem="e24-Pp-DDg" firstAttribute="leading" secondItem="jkQ-0m-1rJ" secondAttribute="trailing" id="cvv-br-n87"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="e24-Pp-DDg" secondAttribute="bottom" id="kJH-4x-SkX"/>
+                            <constraint firstItem="jkQ-0m-1rJ" firstAttribute="top" secondItem="Xr0-Be-aoi" secondAttribute="bottom" id="kic-Nb-ezK"/>
+                            <constraint firstItem="Xr0-Be-aoi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mZd-Kc-dyB"/>
+                            <constraint firstItem="jkQ-0m-1rJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mqp-VL-KdR"/>
+                            <constraint firstItem="e24-Pp-DDg" firstAttribute="top" secondItem="Xr0-Be-aoi" secondAttribute="bottom" id="oUd-qv-T1j"/>
+                            <constraint firstItem="e24-Pp-DDg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ofq-me-9ib"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2EB-dO-Osz" secondAttribute="trailing" id="pN7-21-xym"/>
+                            <constraint firstItem="2EB-dO-Osz" firstAttribute="leading" secondItem="e24-Pp-DDg" secondAttribute="trailing" id="rDe-Jv-ehy"/>
+                            <constraint firstItem="2EB-dO-Osz" firstAttribute="top" secondItem="Xr0-Be-aoi" secondAttribute="bottom" id="sDE-Za-nFu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2EB-dO-Osz" secondAttribute="bottom" id="sHk-O9-k5c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xr0-Be-aoi" secondAttribute="trailing" id="ujV-kh-8fs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="GenerationBoard" destination="Xr0-Be-aoi" id="bNz-cM-haT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="3.3482142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
